@@ -68,5 +68,6 @@ export function analyzeDataset(
 		columnCount: headers.length,
 		columns,
 		preview: rows.slice(0, 10),
+		rows,
 	};
 }

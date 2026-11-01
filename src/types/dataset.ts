@@ -13,4 +13,16 @@ export interface DatasetProfile {
 	columnCount: number;
 	columns: DatasetColumn[];
 	preview: Record<string, unknown>[];
+	rows?: Record<string, unknown>[];
+}
+
+export interface BusinessColumnMapping {
+	date?: string;
+	revenue?: string;
+	profit?: string;
+	customer?: string;
+	product?: string;
+	category?: string;
+	region?: string;
+	orderId?: string;
 }

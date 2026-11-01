@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Dataset {
+  id          String   @id @default(cuid())
+
+  name        String
+
+  description String?
+
+  rowCount    Int
+
+  columnCount Int
+
+  columns     Json
+
+  rows        Json
+
+  createdAt   DateTime @default(now())
+
+  updatedAt   DateTime @updatedAt
+}
